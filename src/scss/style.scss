@@ -1,0 +1,149 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/buttons";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+:root {
+    --gray-light: hsl(212, 45%, 89%);
+    --white: hsl(0, 0%, 100%);
+    --blue-gray: hsl(220, 15%, 55%);
+    --blue-dark: hsl(218, 44%, 22%);
+
+    --fs-text-base: 15px;
+    --fs-text-xs: .75rem;
+    --fs-text-sm: .875rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-body: 1.125rem;
+    --fs-link: 1.125rem;
+    --fs-button: 1.125rem;
+
+    --p-card: 1.5rem;
+    --p-card-sm: 2.5rem;
+    --p-card-md: 3rem;
+
+    --px-button: 1.5rem;
+    --py-button: .75rem;
+    --px-button-sm: 1.5rem;
+    --py-button-sm: 1rem;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--fs-text-base);
+    font-weight: 400;
+
+}
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    color: var(--blue-dark);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.text {
+    color: var(--blue-gray);
+    font-weight: 400;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+}
+
+.page__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--gray-light);
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.card-qr {
+    width: 90%;
+    background-color: var(--white);
+    border-radius: 1.25rem;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @media screen and (min-width: 375px) {
+        width: 100%;
+        max-width: 350px;
+        
+    }
+}
+
+.card-qr__header {
+
+}
+
+.card-qr__body {
+    padding: 1.5rem 0.4rem 1rem ;
+    @media screen and (min-width: 375px) {
+        padding: 2rem 1rem 2.5rem;
+    }
+
+}
+
+.card-qr__image {
+    aspect-ratio: 1/1;
+    border-radius: 14px;
+}
+
+.card-qr__title {
+    font-size: var(--fs-h4);
+    @media (min-width: 375px) {
+        font-size: var(--fs-h3);
+    }
+}
